@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteRule ^home$ main.php?page=home [L]
+RewriteRule ^about$ main.php?page=about [L]
+RewriteRule ^who$ main.php?page=who [L]
+RewriteRule ^services$ main.php?page=services [L]
+RewriteRule ^destination$ main.php?page=destination [L]
+RewriteRule ^page-(.*)$ main.php?page=destination&hal=$1 [L]
+RewriteRule ^agency$ main.php?page=agency [L]
+RewriteRule ^page-(.*)$ main.php?page=agency&hal=$1 [L]
+RewriteRule ^charges$ main.php?page=charges [L]
+RewriteRule ^page-(.*)$ main.php?page=charges&hal=$1 [L]
+RewriteRule ^contact$ main.php?page=contact [L]
+RewriteRule ^contact-success$ main.php?page=contact&alert=1 [L]
+
+Options All -Indexes
+</IfModule>
